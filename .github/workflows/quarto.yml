@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build-and-render:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1️⃣  Check out code
+    - uses: actions/checkout@v4
+
+    # 2️⃣  Restore Conda env
+    - uses: conda-incubator/setup-miniconda@v3
+      with:
+        activate-environment: symphony_analysis
+        environment-file: environment.yml
+        auto-update-conda: true
+        python-version: "3.11"
+
+    # 3️⃣  Install Quarto CLI
+    - uses: quarto-dev/quarto-actions/setup@v2
+
+    # 4️⃣  TinyTeX (needed for PDF builds)
+    - name: Install TinyTeX
+      run: quarto install tinytex --accept-license --yes
+
+    # 5️⃣  Run tests
+    - name: Run pytest
+      run: pytest -q
+
+    # 6️⃣  Render notebook → reports/
+    - name: Render report
+      run: |
+        quarto render analysis/notebook.qmd --output-dir reports
+
+    # 7️⃣  Upload artifacts
+    - name: Upload rendered reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: market-analysis-report
+        path: reports
+
+
