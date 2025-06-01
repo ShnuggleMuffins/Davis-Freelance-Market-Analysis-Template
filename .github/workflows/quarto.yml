@@ -26,7 +26,7 @@ jobs:
 
     # 4️⃣  TinyTeX (needed for PDF builds)
     - name: Install TinyTeX
-      run: quarto install tinytex --no-prompt --prebuilt
+      run: quarto install tinytex --no-prompt
 
     # 5️⃣  Run tests
     - name: Run pytest
