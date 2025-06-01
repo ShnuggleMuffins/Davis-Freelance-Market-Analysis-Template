@@ -1,0 +1,16 @@
+---
+title: "Market Analysis – TEMPLATE"
+format: pdf
+execute:
+  echo: false
+---
+
+```{python}
+#| label: setup
+import pandas as pd
+print("hello Symphony 🧠")
+```
+
+## 1 Introduction
+
+Describe your objective.

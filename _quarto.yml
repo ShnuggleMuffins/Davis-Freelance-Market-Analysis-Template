@@ -1,0 +1,12 @@
+project:
+  type: website
+  output-dir: reports
+
+format:
+  pdf:
+    toc: true
+    number-sections: true
+  pptx: default
+
+execute:
+  freeze: auto
