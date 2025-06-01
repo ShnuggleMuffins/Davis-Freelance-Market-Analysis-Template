@@ -26,14 +26,17 @@ jobs:
 
     # 4️⃣  TinyTeX (needed for PDF builds)
     - name: Install TinyTeX
+      shell: bash -l {0}
       run: quarto install tinytex --no-prompt
 
     # 5️⃣  Run tests
     - name: Run pytest
+      shell: bash -l {0}
       run: pytest -q
 
     # 6️⃣  Render notebook → reports/
     - name: Render report
+      shell: bash -l {0}
       run: |
         quarto render analysis/notebook.qmd --output-dir reports
 
