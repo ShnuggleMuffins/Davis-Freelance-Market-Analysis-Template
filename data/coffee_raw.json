@@ -1,0 +1,37 @@
+[
+  {
+    "Year": 2018,
+    "Revenue": 30.0,
+    "SourceURL": "https://www.statista.com/statistics/270270/revenue-of-the-coffee-market-worldwide/"
+  },
+  {
+    "Year": 2019,
+    "Revenue": 31.0,
+    "SourceURL": "https://www.statista.com/statistics/270270/revenue-of-the-coffee-market-worldwide/"
+  },
+  {
+    "Year": 2020,
+    "Revenue": 32.0,
+    "SourceURL": "https://www.statista.com/statistics/270270/revenue-of-the-coffee-market-worldwide/"
+  },
+  {
+    "Year": 2021,
+    "Revenue": 33.5,
+    "SourceURL": "https://www.statista.com/statistics/270270/revenue-of-the-coffee-market-worldwide/"
+  },
+  {
+    "Year": 2022,
+    "Revenue": 35.0,
+    "SourceURL": "https://www.statista.com/statistics/270270/revenue-of-the-coffee-market-worldwide/"
+  },
+  {
+    "Year": 2023,
+    "Revenue": 36.5,
+    "SourceURL": "https://www.statista.com/statistics/270270/revenue-of-the-coffee-market-worldwide/"
+  },
+  {
+    "Year": 2024,
+    "Revenue": 38.0,
+    "SourceURL": "https://www.statista.com/statistics/270270/revenue-of-the-coffee-market-worldwide/"
+  }
+]
