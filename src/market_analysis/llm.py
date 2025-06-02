@@ -1,9 +1,10 @@
 from openai import OpenAI, RateLimitError, APIError
-
+import os
 def get_client():
     return OpenAI()
 
-def ask(prompt, temperature=0.3, model="gpt-3.5-turbo"):
+def ask(prompt, temperature=0.3,
+        model=os.getenv("MARKET_ANALYSIS_MODEL", "chatgpt-4o-latest")):
     """Return LLM answer or a stub if quota/billing is missing."""
     try:
         rsp = get_client().chat.completions.create(
